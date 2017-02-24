@@ -23,7 +23,7 @@ dataset <- dataset %>%
     mutate(Date_time = dmy_hms(paste(Date, Time)))
 
 # changing graphics device to png
-png(filename = "plot4.png", height=504, width=504)
+png(filename = "plot4.png", height=480, width=480)
 
 # making 4 multiple plots (2 x 2)
 par(mfcol = c(2, 2))
@@ -45,8 +45,8 @@ plot(
     xlab = "",
     ylab = "Energy sub metering"
 )
-points(dataset$Date_time, dataset$Sub_metering_2, type = "l", col = "red")
-points(dataset$Date_time, dataset$Sub_metering_3, type = "l", col = "blue")
+lines(dataset$Date_time, dataset$Sub_metering_2, col = "red")
+lines(dataset$Date_time, dataset$Sub_metering_3, col = "blue")
 legend(
     "topright",
     lty = 1,

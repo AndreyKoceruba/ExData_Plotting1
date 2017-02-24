@@ -20,7 +20,7 @@ dataset <- dataset %>%
     mutate(Date_time = dmy_hms(paste(Date, Time)))
 
 # changing graphics device to png
-png(filename = "plot1.png", height=504, width=504)
+png(filename = "plot1.png", height=480, width=480)
 
 # making a histogram
 hist(
